@@ -34,7 +34,10 @@ else
 }
 ```
 
-Other extension usage doc is to be continued .
+### Recommendation
+Reuse instantiated JsonValidator instances (which basically represent json schema) to validate incoming json instance data if possible in your cases, to gain better performance.
+
+### Other extension usage doc is to be continued .
 
 ## Limitation
 
