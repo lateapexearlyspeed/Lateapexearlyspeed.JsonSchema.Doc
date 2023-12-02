@@ -37,6 +37,16 @@ else
 ### Recommendation
 Reuse instantiated JsonValidator instances (which basically represent json schema) to validate incoming json instance data if possible in your cases, to gain better performance.
 
+## External json schema document reference support
+
+Besides of internal json schema resource support automatically, implementation supports external schema document reference support by:
+
+```csharp
+var jsonValidator = new JsonValidator(jsonSchema);
+string externalJsonSchema = File.ReadAllText("schema2.json");
+jsonValidator.AddExternalDocument(externalJsonSchema);
+```
+
 ### Other extension usage doc is to be continued .
 
 ## Limitation
