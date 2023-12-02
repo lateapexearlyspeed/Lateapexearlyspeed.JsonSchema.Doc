@@ -45,6 +45,7 @@ Besides of internal json schema resource support automatically, implementation s
 var jsonValidator = new JsonValidator(jsonSchema);
 string externalJsonSchema = File.ReadAllText("schema2.json");
 jsonValidator.AddExternalDocument(externalJsonSchema);
+ValidationResult validationResult = jsonValidator.Validate(instance);
 ```
 
 ### Other extension usage doc is to be continued .
