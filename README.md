@@ -34,6 +34,36 @@ else
 }
 ```
 
+### Output Information
+
+When validation failed, you can check detailed error information by:
+
+- IsValid: As summary indicator for passed validation or failed validation.
+
+- ResultCode: The specific error type when validation failed.
+
+- ErrorMessage: the specific wording for human readable message
+
+- Keyword: current keyword when validation failed
+
+- InstanceLocation: The location of the JSON value within the instance being validated. The value is a JSON Pointer.
+
+- RelativeKeywordLocation: The relative location of the validating keyword that follows the validation path. The value is a JSON Pointer, and it includes any by-reference applicators such as "$ref" or "$dynamicRef". Eg:
+    ```
+    /properties/width/$ref/minimum
+    ```
+
+- SubSchemaRefFullUri: The absolute, dereferenced location of the validating keyword when validation failed. The value is a full URI using the canonical URI of the relevant schema resource with a JSON Pointer fragment, and it doesn't include by-reference applicators such as "$ref" or "$dynamicRef" as non-terminal path components. Eg:
+
+    ```
+    https://example.com/schemas/common#/$defs/count/minimum
+    ```
+
+- SchemaResourceBaseUri: The absolute base URI of referenced json schema resource when validation failed. Eg:
+    ```
+    https://example.com/schemas/common
+    ```
+
 ### Recommendation
 Reuse instantiated JsonValidator instances (which basically represent json schema) to validate incoming json instance data if possible in your cases, to gain better performance.
 
