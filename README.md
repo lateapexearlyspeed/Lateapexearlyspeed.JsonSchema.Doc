@@ -34,7 +34,7 @@ else
 }
 ```
 
-### Output Information
+## Output Information
 
 When validation failed, you can check detailed error information by:
 
@@ -64,7 +64,7 @@ When validation failed, you can check detailed error information by:
     https://example.com/schemas/common
     ```
 
-### Recommendation
+## Performance Tips
 Reuse instantiated JsonValidator instances (which basically represent json schema) to validate incoming json instance data if possible in your cases, to gain better performance.
 
 ## External json schema document reference support
