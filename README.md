@@ -6,6 +6,8 @@ The json validation functionalities have passed [official json schema test-suite
 
 This .Net implementation has good performance compared with existing more popular and excellent .Net implementations in common cases by BenchmarkDotnet result, but please verify in your use case. This implementation will continue to improve it.
 
+In future, this library may be transformed to be open source project.
+
 ## Basic Usage
 
 ```
