@@ -71,12 +71,20 @@ Reuse instantiated JsonValidator instances (which basically represent json schem
 
 ## External json schema document reference support
 
-Besides of internal json schema resource support automatically, implementation supports external schema document reference support by:
+Besides of internal sub schema resource reference (inside current json schema document) support automatically, implementation supports external schema document reference support by:
 
+- local schema text
 ```csharp
 var jsonValidator = new JsonValidator(jsonSchema);
 string externalJsonSchema = File.ReadAllText("schema2.json");
 jsonValidator.AddExternalDocument(externalJsonSchema);
+ValidationResult validationResult = jsonValidator.Validate(instance);
+```
+
+- remote schema url (library will retrieve actual schema content by access network)
+```csharp
+var jsonValidator = new JsonValidator(jsonSchema);
+await jsonValidator.AddHttpDocumentAsync(new Uri("http://this-is-json-schema-document"));
 ValidationResult validationResult = jsonValidator.Validate(instance);
 ```
 
@@ -149,7 +157,7 @@ internal class CustomKeywordJsonConverter : JsonConverter<CustomKeyword>
 
 - This implementation focuses on json schema validation, currently not support Annotation
 - Due to lack Annotation support, it also not support following keywords: unevaluatedProperties, unevaluatedItems
-- Not support format feature and content-encoded string currently
+- Not support content-encoded string currently
 
 ## Issue report
 
