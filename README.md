@@ -151,6 +151,44 @@ internal class CustomKeywordJsonConverter : JsonConverter<CustomKeyword>
 }
 ```
 
+## Format support
+
+This library supports following formats currently: 
+- uri
+- uri-reference
+- date
+- time
+- date-time
+- email
+- uuid
+- hostname
+- ipv4
+- ipv6
+- json-pointer
+- regex
+
+Format validation is opt-in feature, it is off by default. To enable format validation, pass configured JsonSchemaOptions when calling Validate method:
+
+```csharp
+jsonValidator.Validate(instance, new JsonSchemaOptions{ValidateFormat = true});
+```
+
+If require more format, implement an custom FormatValidator, and register it:
+
+```csharp
+[Format("custom_format")] // this is your custom format name in json schema
+public class TestCustomFormatValidator : FormatValidator
+{
+    public override bool Validate(string content)
+    {
+        // custom format validation logic here...
+    }
+}
+
+// register it globally
+FormatRegistry.AddFormatType<TestCustomFormatValidator>();
+```
+
 ### Other extension usage doc is to be continued .
 
 ## Limitation
