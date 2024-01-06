@@ -6,7 +6,7 @@ The json validation functionalities have passed [official json schema test-suite
 
 **High performance** - this .Net library has good performance compared with existing more popular and excellent .Net implementations in common cases by BenchmarkDotnet result, but please verify in your use cases.
 
-*Some Benchmark result:*
+*Some Benchmark result (note they are compared under same use pattern - see [Performance Tips](#Performance-Tips) ):*
 
 12th Gen Intel Core i7-12800H, 1 CPU, 20 logical and 14 physical cores
 
@@ -205,7 +205,7 @@ When validation failed, you can check detailed error information by:
     https://example.com/schemas/common
     ```
 
-## Performance Tips
+## <a name="Performance-Tips"></a> Performance Tips
 Reuse instantiated JsonValidator instances (which basically represent json schema) to validate incoming json instance data if possible in your cases, to gain better performance.
 
 ## External json schema document reference support
