@@ -355,7 +355,7 @@ JsonValidator validator = JsonSchemaGenerator.GenerateJsonValidator<TestClass>()
 
 Numeric types: byte, sbyte, short, ushort, int, uint, long, ulong, float, double, decimal.
 
-Boolean, String, Dictionary<string,TAny>, JsonElement, JsonDocument, JsonNode, JsonValue, JsonArray, JsonObject, IEnumerable<TAny>, Enum, Guid, Uri, DateTimeOffset, DateTime, Nullable value type (Nullable<TValue>), Custom object.
+Boolean, String, Dictionary<string,TAny>, JsonElement, JsonDocument, JsonNode, JsonValue, JsonArray, JsonObject, generic type of IEnumerable<TAny>, Enum, Guid, Uri, DateTimeOffset, DateTime, Nullable value type (generic type of Nullable<TValue>), Custom object.
 
 ## Supported validation attributes by now
 
