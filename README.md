@@ -4,6 +4,7 @@ This is a high performance Json schema .Net implementation library based on [Jso
 
 This library also supports validator generation from your class code, see below.
 
+---
 The json validation functionalities have passed [official json schema test-suite](https://github.com/json-schema-org/JSON-Schema-Test-Suite) for draft 2020.12 (except cases about limitation listed below)
 
 **High performance** - this .Net library has good performance compared with existing more popular and excellent .Net implementations in common cases by BenchmarkDotnet result, but please verify in your use cases.
