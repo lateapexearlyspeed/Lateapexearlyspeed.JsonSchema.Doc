@@ -1,3 +1,6 @@
+Because Lateapexearlyspeed.Json.Schema turns to be open source project, so mark this separate doc repo as archived now. Please go to [Lateapexearlyspeed.Json.Schema github repo](https://github.com/lateapexearlyspeed/Lateapexearlyspeed.JsonSchema) directly for doc or other help.
+
+---
 # Lateapexearlyspeed.Json.Schema
 
 This is a high performance Json schema .Net implementation library based on [Json schema](https://json-schema.org/) - draft 2020.12 (latest one by 2023.12).
